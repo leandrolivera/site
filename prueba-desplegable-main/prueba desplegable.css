@@ -1,0 +1,23 @@
+body{
+	background-color:tomato;
+	font-family: georgia, times, serif;
+	font-size: 3.4em;
+	line-height: 1.3em;
+}
+
+.navegacion ul .desplegable{
+	display:block;
+	cursor:pointer;
+}
+
+#uno .navegacion ul li .desplegable {color:white;}
+
+.navegacion ul .adentro.show{
+	display: block !important;
+}
+
+.navegacion ul .adentro{
+	display: none;
+}
+
+
