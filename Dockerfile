@@ -6,9 +6,9 @@ RUN cd /usr/src/wordpress/wp-content/plugins && \
     wget https://downloads.wordpress.org/plugin/custom-css-js.3.36.zip && \
     wget https://downloads.wordpress.org/plugin/wp-rss-aggregator.4.17.4.zip && \
     wget https://github.com/versionpress/versionpress/releases/download/4.0-beta2/versionpress-4.0-beta2.zip && \
-    wget https://github.com/ucsf-app/site/raw/master/plugins/wp-appkit-ssl.zip && \
-    wget https://github.com/ucsf-app/site/raw/master/plugins/child-theme-configurator.2.5.8.zip && \
-    wget https://github.com/ucsf-app/site/raw/master/plugins/custom-css-js.3.36.zip && \
+    wget https://github.com/leandrolivera/site/tree/master/plugins/wp-appkit-ssl.zip && \
+    wget https://github.com/leandrolivera/site/tree/master/plugins/child-theme-configurator.2.5.8.zip && \
+    wget https://github.com/leandrolivera/site/tree/master/plugins/custom-css-js.3.36.zip && \
     wget https://downloads.wordpress.org/plugin/category-tag-pages.zip && \
     unzip \*.zip && \
     rm *.zip
