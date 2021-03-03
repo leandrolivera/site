@@ -18,7 +18,7 @@ services:
      build:
        context: .
        dockerfile: Dockerfile
-     image: ucsfapp/site
+     image: leandroolivera/ucsfapp
      ports:
        - "80:80"
      restart: always
