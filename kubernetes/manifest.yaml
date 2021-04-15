@@ -1,33 +1,18 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: extensions/v1beta1
+kind: Ingress
 metadata:
-  name: hello-world
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: hello-world
-  template:
-    metadata:
-      labels:
-        app: hello-world
-    spec:
-      containers:
-      - image: okteto/hello-world:golang
-        name: hello-world
-
----
-
-apiVersion: v1
-kind: Service
-metadata:
-  name: hello-world
+  name: wordpress
   annotations:
-    dev.okteto.com/auto-ingress: "true"
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
 spec:
-  type: ClusterIP  
-  ports:
-  - name: "hello-world"
-    port: 8080
-  selector:
-    app: hello-world
+  rules:
+    - host: ucsf-app.cloud.okteto.net
+      http:
+        paths:
+          - backend:
+              serviceName: wordpress
+              servicePort: 80
+            path: /
+  tls:
+    - hosts:
+        - ucsf-app.cloud.okteto.net
